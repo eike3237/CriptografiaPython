@@ -16,7 +16,7 @@ print(diretorioatual)
 
 # ---------------------- FUNÇÕES -------------------- #
 def arquivamento(chave_secreta_interna, mensagem_interna):
-    chave_arquivada = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaMessage.txt', 'w', encoding='UTF-8')
+    chave_arquivada = open(r'YOURDIRECTORY\ARCHIVE1.txt', 'w', encoding='UTF-8')
     escrita = 'Chave secreta: ' + str(chave_secreta_interna) + '\n' + 'Mensagem criptografada: ' + mensagem_interna
     chave_arquivada.write(str(escrita))
     chave_arquivada.close()
@@ -24,10 +24,10 @@ def arquivamento(chave_secreta_interna, mensagem_interna):
 
 # ---------------------------- TESTE DE DESCRIPTO SOLO ---------------------
 def arquivamento2():
-    arquivamento_lista_msg = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaSK.txt', 'w+', encoding='UTF-8')
+    arquivamento_lista_msg = open(r'YOURDIRECTORY\ARCHIVE2.txt', 'w+', encoding='UTF-8')
     arquivamento_lista_msg.close()
 
-    arquivamento_lista_msg = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaSK.txt', 'a+', encoding='UTF-8')
+    arquivamento_lista_msg = open(r'YOURDIRECTORY\ARCHIVE2.txt', 'a+', encoding='UTF-8')
 
     for letra_na_lista in msg_criptografada:
         char_da_msg_zerado = str(letra_na_lista) + '.'  
@@ -37,7 +37,7 @@ def arquivamento2():
 
 
 def desarquivamento():
-    chave_secreta_arquivada = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaMessage.txt', 'r', encoding='UTF-8')
+    chave_secreta_arquivada = open(r'YOURDIRECTORY\ARCHIVE1.txt', 'r', encoding='UTF-8')
     linha = chave_secreta_arquivada.readline()
     conteudo_linha = []
     for c in linha:
@@ -55,7 +55,7 @@ def desarquivamento_direto():
     numeros_descriptografados = [] 
 
     
-    mensagem_criptografada = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaSK.txt', 'r', encoding='UTF-8')
+    mensagem_criptografada = open(r'YOURDIRECTORY\ARCHIVE2.txt', 'r', encoding='UTF-8')
     # -------- LEITURA MENSAGEM ------- # 
     mensagem_lida = mensagem_criptografada.readline()
     mensagem_separada = mensagem_lida.split('.')
@@ -67,7 +67,7 @@ def desarquivamento_direto():
     
 
     # -------------- Leitura chave secreta ----------- #
-    chave_secreta_arquivada = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaMessage.txt', 'r', encoding='UTF-8')
+    chave_secreta_arquivada = open(r'YOURDIRECTORY\ARCHIVE1.txt', 'r', encoding='UTF-8')
     linha = chave_secreta_arquivada.readline()
     conteudo_linha = [] 
 
@@ -96,7 +96,7 @@ def desarquivamento_direto():
 
 
 def leitura_mensagem():
-    leitura_da_criptografada = open(r'C:\Users\eike_\Desktop\Facul\2° Semestre\IPE-Python-2019\APS-Final\criptografiaMessage.txt', 'r', encoding='UTF-8'); # Mudar de acordo com o diretorio do arquivo de texto
+    leitura_da_criptografada = open(r'YOURDIRECTORY\ARCHIVE1.txt', 'r', encoding='UTF-8'); # Mudar de acordo com o diretorio do arquivo de texto
     arquivos_das_linhas = leitura_da_criptografada.readlines()
     leitura_da_criptografada.close()
     
